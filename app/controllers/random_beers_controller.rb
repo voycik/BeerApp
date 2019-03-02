@@ -1,0 +1,2 @@
+class RandomBeersController < ApplicationController
+end
