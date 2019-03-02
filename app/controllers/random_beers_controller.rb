@@ -1,5 +1,5 @@
 class RandomBeersController < ApplicationController
   def show
-    @beer = GetRandomBeer.call
+    $beer = GetRandomBeer.call
   end
 end

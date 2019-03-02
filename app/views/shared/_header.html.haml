@@ -16,8 +16,8 @@
           =current_user.email
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
           %a.dropdown-item{:href => "#"} Edit profile
-          .dropdown-divider
-          %a.dropdown-item{:href => "#"} Sign out
+          .dropdown-divider          
+          = link_to t('navbar.sign_out'), destroy_user_session_path, method: :delete, class: 'dropdown-item'
     - else
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}

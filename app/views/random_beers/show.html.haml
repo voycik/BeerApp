@@ -1,7 +1,9 @@
 %h1 Random beer
 .row
   .col-2
-    %img.img-thumbnail{:alt => "Avatar", :src => "#{JSON.parse(@beer)[0]['image_url']}"}
+    %img.img-thumbnail{:alt => "Avatar", :src => "#{JSON.parse($beer)[0]['image_url']}"}
   .col-4
-    %p Beer name: #{JSON.parse(@beer)[0]['name']}
-    %p Beer description: #{JSON.parse(@beer)[0]['description']}
+    %p Beer name: #{JSON.parse($beer)[0]['name']}
+    %p Beer description: #{JSON.parse($beer)[0]['description']}
+    %p
+      = link_to ('Save this beer'), my_beers_path, method: :post, class: 'btn btn-dar'
