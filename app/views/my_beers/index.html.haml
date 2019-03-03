@@ -1,0 +1,14 @@
+%h1 My saved beers
+.card-deck
+  - @beers.each do |beer|
+  - @single_beer = GetSingleBeer.new(beer).call
+    .col-3
+      .card.mb-3{:style => "max-width: 540px;"}
+        .row.no-gutters
+          .col-md-4
+            %img.card-img{:alt => "#{JSON.parse(@single_beer)[0]['name']}", :src => "#{JSON.parse(@single_beer)[0]['image_url']}"}/
+          .col-md-8
+            .card-body
+              %h5.card-title #{JSON.parse(@single_beer)[0]['name']}
+              %p.card-text #{JSON.parse(@single_beer)[0]['description']}
+              = link_to ('Remove'), my_beer_path(MyBeer.find_by(beer_id: beer)), method: :delete, data: { confirm: 'Are you sure want do remove this beer?' }, class: 'btn btn-dark bg-dark'
