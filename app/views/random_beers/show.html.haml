@@ -1,6 +1,6 @@
 %h1 Random beer
 .row
-  .col-2
+  .col-1
     %img.img-thumbnail{:alt => "#{JSON.parse($beer)[0]['name']}", :src => "#{JSON.parse($beer)[0]['image_url']}"}
   .col-4
     %p Beer name: #{JSON.parse($beer)[0]['name']}
