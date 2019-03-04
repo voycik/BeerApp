@@ -1,24 +1,23 @@
-# README
+## App description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I made this app to practise parsing and using data from external API.
+All data comes from https://punkapi.com/
 
-Things you may want to cover:
+## Technology stack
 
-* Ruby version
+|                     Name                     | Version |
+| :------------------------------------------: | :-----: |
+|      [Ruby](https://www.ruby-lang.org)       |  2.6.1  |
+| [Ruby on Rails](http://www.rubyonrails.org/) |  5.2.2  |
+|   [PostgreSQL](http://www.postgresql.org/)   |  11.1   |
 
-* System dependencies
+## Setup
 
-* Configuration
+- Configuration
+  `bundle install`
 
-* Database creation
+- Database creation
+  `rails db:setup`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Running rails server
+  `rails s`
