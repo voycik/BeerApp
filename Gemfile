@@ -28,6 +28,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'sprockets-rails', '~> 3.2'
 gem 'jquery-rails'
 gem 'devise', '~> 4.6', '>= 4.6.1'
+gem 'factory_bot_rails'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
