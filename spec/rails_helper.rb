@@ -1,5 +1,9 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'simplecov'
+SimpleCov.start
+
 require 'spec_helper'
+require 'devise'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -64,4 +68,16 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+
+  config.include FactoryBot::Syntax::Methods
+  RSpec.configure do |config|
+    # For Devise > 4.1.1
+    config.include Devise::Test::ControllerHelpers, :type => :controller
+    # Use the following instead if you are on Devise <= 4.1.1
+    # config.include Devise::TestHelpers, :type => :controller
+  end
+  RSpec.configure do |config|
+    config.include Devise::Test::IntegrationHelpers, type: :feature
+  end
+
 end
